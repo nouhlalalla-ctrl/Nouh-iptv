@@ -24,12 +24,12 @@ jobs:
         with:
           gradle-version: '8.2'
 
-      - name: Build Release APK
+      - name: Build Debug APK
         working-directory: nouh-android-phone
-        run: gradle assembleRelease
+        run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: NOUH-IPTV.apk
-          path: nouh-android-phone/app/build/outputs/apk/release/*.apk
+          path: nouh-android-phone/app/build/outputs/apk/debug/*.apk
