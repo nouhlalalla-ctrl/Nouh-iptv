@@ -1,4 +1,4 @@
-name: Build Phone APK
+name: Build TV APK
 
 on:
   push:
@@ -18,9 +18,9 @@ jobs:
         with:
           gradle-version: '8.2'
       - name: Build Debug APK
-        working-directory: nouh-android-phone
+        working-directory: nouh-android-tv
         run: gradle assembleDebug
       - uses: actions/upload-artifact@v4
         with:
-          name: NOUH-IPTV-Phone.apk
-          path: nouh-android-phone/app/build/outputs/apk/debug/*.apk
+          name: NOUH-IPTV-TV.apk
+          path: nouh-android-tv/app/build/outputs/apk/debug/*.apk
